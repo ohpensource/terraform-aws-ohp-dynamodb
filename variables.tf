@@ -100,7 +100,7 @@ variable "global_secondary_index" {
     read_capacity      = number
     write_capacity     = number
   }))
-  default     = [
+  default = [
     # {
     #   hash_key           = ""
     #   name               = ""

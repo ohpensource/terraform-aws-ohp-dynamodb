@@ -120,9 +120,9 @@ resource "aws_backup_plan" "dynamodb_backup_plan" {
   name = "dynamodb_backup_plan"
 
   rule {
-    rule_name = "tf_backup_rule"
+    rule_name         = "tf_backup_rule"
     target_vault_name = aws_backup_vault.backup_vault.name
-    schedule = "cron(0 12 * * ? *)"
+    schedule          = "cron(0 12 * * ? *)"
   }
 }
 
