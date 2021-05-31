@@ -30,7 +30,7 @@ variable "stream_view_type" {
 
 variable "enable_encryption" {
   type        = bool
-  default     = false
+  default     = true
   description = "Enable DynamoDB server-side encryption"
 }
 
@@ -125,15 +125,54 @@ variable "local_secondary_index" {
   description = "Additional local secondary indexes in the form of a list of mapped values"
 }
 
-variable "tags" { type = map(any) }
-
 variable "replicas" {
   type        = list(string)
   default     = []
   description = "List of regions to create replica"
 }
 
-# variable "default_tags" {
+variable "write_capacity" {
+  type        = number
+  default     = 10
+  description = "Write capacity"
+}
+variable "read_capacity" {
+  type        = number
+  default     = 10
+  description = "Read capacity"
+}
+
+variable "autoscaling_target_value" {
+  type        = number
+  default     = 70
+  description = "Autoscaling target value"
+}
+
+variable "autoscaling_read_min_capacity" {
+  type        = number
+  default     = 5
+  description = "Autoscaling read minimum capacity"
+}
+
+variable "autoscaling_read_max_capacity" {
+  type        = number
+  default     = 1000
+  description = "Autoscaling read maximum capacity"
+}
+
+variable "autoscaling_write_min_capacity" {
+  type        = number
+  default     = 5
+  description = "Autoscaling write minimum capacity"
+}
+
+variable "autoscaling_write_max_capacity" {
+  type        = number
+  default     = 1000
+  description = "Autoscaling write maximum capacity"
+}
+
+variable "tags" {}
 #     Iac          = "terraform"
 #     IacRepo      = var.iac_repo
 #     Team         = var.devops_team
