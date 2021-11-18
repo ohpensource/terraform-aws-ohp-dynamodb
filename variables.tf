@@ -58,7 +58,6 @@ variable "hash_key_type" {
 
 variable "range_key" {
   type        = string
-  default     = ""
   description = "DynamoDB table Range Key"
 }
 
