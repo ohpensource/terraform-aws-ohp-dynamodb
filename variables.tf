@@ -1,7 +1,6 @@
 variable "name" {
   type        = string
-  default     = ""
-  description = "DynamoDB Billing mode. Can be PROVISIONED or PAY_PER_REQUEST"
+  description = "DynamoDB name"
 }
 
 variable "enabled" {
