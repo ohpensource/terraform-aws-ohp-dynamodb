@@ -1,7 +1,6 @@
 variable "name" {
   type        = string
-  default     = ""
-  description = "DynamoDB Billing mode. Can be PROVISIONED or PAY_PER_REQUEST"
+  description = "DynamoDB name"
 }
 
 variable "enabled" {
@@ -59,7 +58,6 @@ variable "hash_key_type" {
 
 variable "range_key" {
   type        = string
-  default     = ""
   description = "DynamoDB table Range Key"
 }
 
