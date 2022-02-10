@@ -170,7 +170,11 @@ variable "autoscaling_write_max_capacity" {
   description = "Autoscaling write maximum capacity"
 }
 
-variable "tags" {}
+variable "tags" {
+  type        = map(any)
+  default     = {}
+  description = "Values will combine with your provider default_tags configuration"
+}
 #     Iac          = "terraform"
 #     IacRepo      = var.iac_repo
 #     Team         = var.devops_team
