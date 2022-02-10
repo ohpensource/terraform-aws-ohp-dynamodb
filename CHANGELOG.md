@@ -1,3 +1,9 @@
+# :confetti_ball: 0.0.3 (2022-02-10T12:04:54.544Z)
+- - -
+## :bug: Fixes
+* LANZ-1669 conditional autoscaling setup (#6)
+- - -
+- - -
 # :confetti_ball: 0.0.2 (2022-02-10T11:22:25.038Z)
 - - -
 ## :newspaper: Others
