@@ -1,0 +1,3 @@
+exclude:
+  - aws-cloudwatch-log-group-customer-key
+  - aws-lambda-enable-tracing

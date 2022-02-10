@@ -68,6 +68,7 @@ resource "aws_dynamodb_table" "default" {
 resource "aws_kms_key" "dynamo_kms" {
   description             = "Dynamo DB KMS ${var.name}"
   deletion_window_in_days = 10
+  enable_key_rotation     = true
 }
 
 resource "aws_appautoscaling_target" "dynamodb-test-table_read_target" {
@@ -134,6 +135,7 @@ resource "aws_backup_vault" "backup_vault" {
 resource "aws_kms_key" "backup_vault_keys" {
   description             = "KMS keys used to encrypt backup vault"
   deletion_window_in_days = 10
+  enable_key_rotation     = true
 }
 
 resource "aws_backup_selection" "dynamodb_backup_selection" {
