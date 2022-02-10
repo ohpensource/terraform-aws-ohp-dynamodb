@@ -1,0 +1,3 @@
+locals {
+  PAY_PER_REQUEST = "PAY_PER_REQUEST"
+}
