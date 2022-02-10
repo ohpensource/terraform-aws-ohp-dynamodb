@@ -1,3 +1,9 @@
+# :confetti_ball: 0.1.0 (2022-02-10T13:57:54.130Z)
+- - -
+## :hammer: Features
+* LANZ-1669 conditionally create backup resources (#7)
+- - -
+- - -
 # :confetti_ball: 0.0.3 (2022-02-10T12:04:54.544Z)
 - - -
 ## :bug: Fixes
