@@ -1,3 +1,9 @@
+# :confetti_ball: 0.0.2 (2022-02-10T11:22:25.038Z)
+- - -
+## :newspaper: Others
+* Merge pull request #5 from ohpensource/lanz/1669
+- - -
+- - -
 # :confetti_ball: 0.0.1 (2022-02-10T08:05:43.894Z)
 - - -
 ## :newspaper: Others
