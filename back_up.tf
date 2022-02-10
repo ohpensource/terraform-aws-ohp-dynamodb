@@ -3,9 +3,9 @@ resource "aws_backup_plan" "dynamodb_backup_plan" {
 
   name = var.name
   rule {
-    rule_name         = "tf_backup_rule"
+    rule_name         = var.name
     target_vault_name = aws_backup_vault.backup_vault[0].name
-    schedule          = "cron(0 12 * * ? *)"
+    schedule          = var.backup_cron_expression
   }
 }
 
@@ -13,15 +13,7 @@ resource "aws_backup_vault" "backup_vault" {
   count = var.enable_point_in_time_recovery ? 1 : 0
 
   name        = var.name
-  kms_key_arn = aws_kms_key.backup_vault_keys[0].arn
-}
-
-resource "aws_kms_key" "backup_vault_keys" {
-  count = var.enable_point_in_time_recovery ? 1 : 0
-
-  description             = "KMS keys used to encrypt backup vault"
-  deletion_window_in_days = 10
-  enable_key_rotation     = true
+  kms_key_arn = var.kms_key_arn
 }
 
 resource "aws_backup_selection" "dynamodb_backup_selection" {

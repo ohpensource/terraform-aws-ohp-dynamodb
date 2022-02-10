@@ -1,11 +1,3 @@
-resource "aws_kms_key" "dynamo_kms" {
-  count = var.enable_encryption ? 1 : 0
-
-  description             = "Dynamo DB KMS ${var.name}"
-  deletion_window_in_days = 10
-  enable_key_rotation     = true
-}
-
 resource "aws_dynamodb_table" "default" {
   count            = var.enabled ? 1 : 0
   name             = var.name
@@ -19,7 +11,7 @@ resource "aws_dynamodb_table" "default" {
 
   server_side_encryption {
     enabled     = var.enable_encryption
-    kms_key_arn = aws_kms_key.dynamo_kms[0].arn
+    kms_key_arn = var.kms_key_arn
   }
 
   point_in_time_recovery {
