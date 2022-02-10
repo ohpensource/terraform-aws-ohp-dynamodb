@@ -84,7 +84,7 @@ No modules.
 | <a name="input_replicas"></a> [replicas](#input\_replicas) | List of regions to create replica | `list(string)` | `[]` | no |
 | <a name="input_stream_enabled"></a> [stream\_enabled](#input\_stream\_enabled) | Enable DynamoDB streams | `bool` | `false` | no |
 | <a name="input_stream_view_type"></a> [stream\_view\_type](#input\_stream\_view\_type) | When an item in the table is modified, what information is written to the stream | `string` | `""` | no |
-| <a name="input_tags"></a> [tags](#input\_tags) | n/a | `any` | n/a | yes |
+| <a name="input_tags"></a> [tags](#input\_tags) | Values will combine with your provider default_tags configuration | `any` | n/a | no |
 | <a name="input_ttl_attribute"></a> [ttl\_attribute](#input\_ttl\_attribute) | DynamoDB table TTL attribute | `string` | `""` | no |
 | <a name="input_ttl_enabled"></a> [ttl\_enabled](#input\_ttl\_enabled) | DynamoDB table TTL attribute enable/disable | `bool` | `false` | no |
 | <a name="input_write_capacity"></a> [write\_capacity](#input\_write\_capacity) | Write capacity | `number` | `10` | no |
