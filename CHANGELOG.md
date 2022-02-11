@@ -1,3 +1,13 @@
+# :confetti_ball: 0.2.0 (2022-02-11T09:12:41.812Z)
+- - -
+## :hammer: Features
+* LANZ-1669 conditionally create kms key for server side encryptions
+## :bug: Fixes
+* LANZ-1669 make server_side_encryption dynamic
+## :newspaper: Others
+* ci: LANZ-1669 add conv.commits to prs
+- - -
+- - -
 # :confetti_ball: 0.1.0 (2022-02-10T13:57:54.130Z)
 - - -
 ## :hammer: Features
