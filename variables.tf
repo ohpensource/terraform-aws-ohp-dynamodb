@@ -11,8 +11,20 @@ variable "enabled" {
 
 variable "billing_mode" {
   type        = string
-  default     = "PROVISIONED"
+  default     = "PAY_PER_REQUEST"
   description = "DynamoDB Billing mode. Can be PROVISIONED or PAY_PER_REQUEST"
+}
+
+variable "write_capacity" {
+  type        = number
+  default     = null
+  description = "Write capacity"
+}
+
+variable "read_capacity" {
+  type        = number
+  default     = null
+  description = "Read capacity"
 }
 
 variable "stream_enabled" {
@@ -45,6 +57,11 @@ variable "enable_point_in_time_recovery" {
   description = "Enable DynamoDB point in time recovery"
 }
 
+variable "backup_cron_expression" {
+  type    = string
+  default = "cron(0 12 * * ? *)"
+}
+
 variable "hash_key" {
   type        = string
   description = "DynamoDB table Hash Key"
@@ -65,12 +82,6 @@ variable "range_key_type" {
   type        = string
   default     = "S"
   description = "Range Key type, which must be a scalar type: `S`, `N`, or `B` for (S)tring, (N)umber or (B)inary data"
-}
-
-variable "ttl_enabled" {
-  type        = bool
-  default     = false
-  description = "DynamoDB table TTL attribute enable/disable"
 }
 
 variable "ttl_attribute" {
@@ -127,17 +138,6 @@ variable "replicas" {
   type        = list(string)
   default     = []
   description = "List of regions to create replica"
-}
-
-variable "write_capacity" {
-  type        = number
-  default     = 10
-  description = "Write capacity"
-}
-variable "read_capacity" {
-  type        = number
-  default     = 10
-  description = "Read capacity"
 }
 
 variable "autoscaling_target_value" {
