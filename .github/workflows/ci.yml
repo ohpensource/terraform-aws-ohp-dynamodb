@@ -8,7 +8,7 @@ jobs:
   validate-iac:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - uses: ohpensource/platform-cicd/actions/terraform/tfm-validate@2.2.0.0
         name: validate-terraform
         with:
@@ -17,13 +17,13 @@ jobs:
   validate-security:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - uses: aquasecurity/tfsec-action@v1.0.0
         name: analyse-security
   check-conventional-commits:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           fetch-depth: 0
       - uses: ohpensource/platform-cicd/actions/git/ensure-conventional-commits@0.6.0.0
@@ -34,7 +34,7 @@ jobs:
   # tfm-docs:
   #   runs-on: ubuntu-latest
   #   steps:
-  #     - uses: actions/checkout@v2
+  #     - uses: actions/checkout@v3
   #       with:
   #         ref: ${{ github.event.pull_request.head.ref }}
   #     - name: Render terraform docs inside the README.md and push changes back to PR branch
