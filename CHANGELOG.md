@@ -1,3 +1,9 @@
+# :confetti_ball: 0.2.1 (2022-03-13T12:51:42.391Z)
+- - -
+## :newspaper: Others
+* Merge remote-tracking branch 'origin/master'
+- - -
+- - -
 # :confetti_ball: 0.2.0 (2022-02-11T09:12:41.812Z)
 - - -
 ## :hammer: Features
