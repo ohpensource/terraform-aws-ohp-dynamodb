@@ -1,3 +1,9 @@
+# :confetti_ball: 0.2.2 (2022-11-23T15:48:20.492Z)
+- - -
+## :bug: Fixes
+* make range key input optional; update readme (#25)
+- - -
+- - -
 # :confetti_ball: 0.2.1 (2022-03-13T12:51:42.391Z)
 - - -
 ## :newspaper: Others
